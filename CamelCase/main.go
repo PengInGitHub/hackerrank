@@ -9,10 +9,21 @@ import (
 )
 
 // Complete the camelcase function below.
+// func camelcase(s string) int32 {
+// 	counter := int32(1)
+// 	for _, c := range s {
+// 		if strings.ToUpper(string(c)) == string(c) {
+// 			counter++
+// 		}
+// 	}
+// 	return counter
+// }
+
 func camelcase(s string) int32 {
 	counter := int32(1)
+	min, max := 'A', 'Z'
 	for _, c := range s {
-		if strings.ToUpper(string(c)) == string(c) {
+		if c >= min && c <= max {
 			counter++
 		}
 	}
